@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Signika';
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.title {
+  position: relative;
+  top: -30vh;
+  right: -10vh;
+  color: white;
+  /*width: auto; */
+  font-weight: bold;
+  font-family: 'Signika';  
+  font-size: 15px;
+  text-shadow: 1px 1px 0px black;
+}
+
+
+.amount > p {
+  color: white;
+  text-align: center;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-size: 1.1pt;
+  font-family: Verdana;
+}
+
+#icon {
+  display:block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  bottom: -10px;
+
+}
+
+.amount { 
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+  width: 150px;
+  top: 30%;
+  -webkit-appearance: none;
+  border: none;
+  background-color:rgba(12, 12, 12, 0.35);
+  box-shadow: 0 0 0 1px rgba(38, 38, 38, 0.3) inset;
+  color: white;
+  text-align: center;
+  transition: background-color .1s linear;
+}
+
+.amount:hover {
+  background-color: rgba(218, 0, 0, 0.2);
+  /* rgba(20, 20, 20, 0.5) */
+}
+
+.craft-body {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+}
+  
+  .grid-container {
+    display: flex;
+    align-self: center;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: left;
+    overflow-y:auto;
+    background-color: rgba(32, 32, 32, 0.3);
+    width: 1005px;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+    /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(44, 43, 43, 0.548);
+    border-radius: 10px;
+  }
+
+  .grid-item {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 1px rgba(38, 38, 38, 0.3) inset;
+    margin: 1px;
+    padding: 20px;
+    font-size: 30px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .text-field {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 1px rgba(38, 38, 38, 0.3) inset;
+    color: white;
+    height: 498px;
+    width: 250px;
+    font-family: 'Signika';
+  }
+
+  .object-name{
+    text-align: center;
+  }
+
+  .crafted-object{
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6) inset;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .ingredient {
+    width: 240px;
+    text-align: left;
+    margin: 2px;
+  }
