@@ -15,10 +15,12 @@ function EnableGui(enable, Crafting, Craftables)
         enable = enable,
         Level = Crafting
     })
-    SendNUIMessage({
-        type = "addItems",
-        Items = Craftables
-    })
+	if enable then
+		SendNUIMessage({
+			type = "addItems",
+			Items = Craftables
+		})
+	end
 end
 
 RegisterNetEvent("weasel-crafting:openMenu")
@@ -32,7 +34,7 @@ AddEventHandler("weasel-crafting:customMenu", function(Items, Crafting)
 end)
 
 RegisterNUICallback('escape', function(data, cb)
-    EnableGui(false)
+    EnableGui(false, 0)
 
     cb('ok')
 end)
