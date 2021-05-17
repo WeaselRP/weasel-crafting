@@ -42,7 +42,7 @@ end)
 RegisterNUICallback('craft', function(data, cb)
     EnableGui(false)
     if hasItems(data.Item, data.Amount) then
-        exports['mythic_notify']:SendAlert('inform', 'Press E to cancel')
+        exports['mythic_notify']:SendAlert('inform', 'Press HOME to cancel')
         TriggerEvent("mythic_progbar:client:progress", {
             name = "crafting_item",
             duration = data.Item.Time*data.Amount,
@@ -125,7 +125,7 @@ Citizen.CreateThread(function()
             DisableControlAction(0, 142, guiEnabled) -- MeleeAttackAlternate
 
             DisableControlAction(0, 106, guiEnabled) -- VehicleMouseControlOverride
-        end 
+        end
         Citizen.Wait(0)
     end
 end)
