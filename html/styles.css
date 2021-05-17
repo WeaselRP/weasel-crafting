@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 * {
   font-family: 'Signika';
   margin: 0;
   padding: 0;
   user-select: none;
+  box-sizing: border-box;
 }
 
 .title {
@@ -12,7 +14,6 @@
   top: -30vh;
   right: -10vh;
   color: white;
-  /*width: auto; */
   font-weight: bold;
   font-family: 'Signika';  
   font-size: 15px;
@@ -62,6 +63,26 @@
   /* rgba(20, 20, 20, 0.5) */
 }
 
+.craftBtn { 
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 40px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  -webkit-appearance: none;
+  border: 2px solid rgba(28, 242, 28, 0.35);
+  background-color:rgba(12, 12, 12, 0.35);
+  box-shadow: 0 0 0 1px rgba(38, 38, 38, 0.3) inset;
+  color: white;
+  transition: background-color .1s linear;
+}
+
+.craftBtn:hover {
+  background-color:rgba(28, 242, 28, 0.35);
+}
+
 .craft-body {
   display: flex;
   flex-flow: row wrap;
@@ -106,13 +127,39 @@
   }
 
   .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 0 1px rgba(38, 38, 38, 0.3) inset;
     margin: 1px;
-    padding: 20px;
     font-size: 30px;
-    height: 100px;
-    width: 100px;
+    width: 140px;
+    overflow: hidden;
+  }
+
+  .grid-item:hover {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .gridImage {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    padding: 0;
+  }
+
+  .itemLabel {
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    padding: 5px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    color: white;
   }
 
   .text-field {
@@ -134,12 +181,10 @@
   }
 
   .crafted-object{
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6) inset;
-    margin: 10px;
-    padding: 20px;
+    padding: 5px 20px 10px 20px;
     font-size: 30px;
-    height: 100px;
-    width: 100px;
+    height: 180px;
+    width: 180px;
   }
 
   .ingredient {

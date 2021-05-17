@@ -16,13 +16,14 @@ function fillData(){
         $(".grid-container").empty()
         for (i = 0; i < Items.length; i++) {
             if (Items[i].Level <= Level) {
-                $(".grid-container").append("<li class='grid-item' id="+i+"><img src='"+getItemIMG(Items[i].Name)+"' id='icon'/></li>");
+                $(".grid-container").append("<li class='grid-item' id="+i+"><img class='gridImage' src='"+getItemIMG(Items[i].Name)+"' id='icon'/><p class='itemLabel'>"+Items[i].DisplayName+"</p></li>");
             }
         }
     }
 }
 
 $(function() {
+    let gridItem = null
     window.addEventListener('message', function(event) {
         if (event.data.type == "enableui") {
             document.body.style.display = event.data.enable ? "block" : "none";
@@ -41,7 +42,9 @@ $(function() {
         }
     };
 
-    $(document).on('mouseover', '.grid-item', function(e) {
+    $(document).on('click', '.grid-item', function(e) {
+        gridItem = parseInt(this.id);
+        $('.amount').select();
         let id = parseInt(this.id);
         if (id < Items.length && Items[id].Level <= Level) {
             lastID = id;
@@ -65,8 +68,8 @@ $(function() {
         }
     });
 
-    $(document).on('click', '.grid-item', function(e) {
-        let id = parseInt(this.id);
+    $(document).on('click', '.craftBtn', function(e) {
+        let id = parseInt(gridItem);
         let amount = $('.amount').val()
         amount = amount.replace(/\D/g,'');
         if (amount <= 0) {
@@ -78,6 +81,24 @@ $(function() {
                 Item: Items[id],
                 Amount: amount
             }));
+        }
+    });
+
+    $(document).on('keypress', '.amount', function(e) {
+        if (e.which == 13) {
+            let id = parseInt(gridItem);
+            let amount = $('.amount').val()
+            amount = amount.replace(/\D/g,'');
+            if (amount <= 0) {
+                amount = 1;
+            }
+
+            if (id < Items.length && Items[id].Level <= Level) {
+                $.post('https://weasel-crafting/craft', JSON.stringify({
+                    Item: Items[id],
+                    Amount: amount
+                }));
+            }
         }
     });
 

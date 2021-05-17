@@ -1,15 +1,15 @@
 Config = {
     Items = {
         {
-            Name = "weed_pouch",
-            DisplayName = "Weed Pouch 1oz",
+            Name = "crystal_meth_bag",
+            DisplayName = "Crystal Meth 1g",
             Quantity = 1,
             MetaData = {},
             Time = 1000,
             Level = 1,
             Recipe = {
-                {'Weed', 'weed', 28, {}, true},
-                {'Plastic Pouch', 'plastic_pouch', 1, {}, true} -- Displayname, Item Name, Amount needed, metadata, consumed
+                {'Crystal Meth', 'crystal_meth_bulk', 1, {}, false},
+                {'Gram Bag', 'gram_bag', 1, {}, false}, -- Displayname, Item Name, Amount needed, metadata, consumed
             }
         },
         {
@@ -77,7 +77,7 @@ Config = {
             Quantity = 1,
             MetaData = {},
             Time = 1000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Weed', 'weed', 5, {}, true},
                 {'Rolling Paper', 'rolling_paper', 1, {}, true}
@@ -89,7 +89,7 @@ Config = {
             Quantity = 50,
             MetaData = {},
             Time = 1000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Coke', 'coke', 40, {}, true},
                 {'Baking Soda', 'bakingsoda', 2, {}, true}
