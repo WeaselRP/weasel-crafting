@@ -39,12 +39,12 @@ Config = {
         {
             Name = "crack_pouch",
             DisplayName = "crack pouch 5g",
-            Quantity = 50,
+            Quantity = 1,
             MetaData = {},
             Time = 1000,
             Level = 1,
             Recipe = {
-                {'Crack', 'crack', 40, {}, true},
+                {'Crack', 'crack', 5, {}, true},
                 {'Plastic Pouch', 'plastic_pouch', 1, {}, true}
             }
         },
@@ -92,7 +92,7 @@ Config = {
             Level = 1,
             Recipe = {
                 {'Coke', 'coke', 40, {}, true},
-                {'Baking Soda', 'bakingsoda', 1, {}, true}
+                {'Baking Soda', 'bakingsoda', 2, {}, true}
             }
         },
         {
