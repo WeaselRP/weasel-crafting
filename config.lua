@@ -39,7 +39,7 @@ Config = {
         },
         {
             Name = "crack_pouch",
-            DisplayName = "crack pouch 5g",
+            DisplayName = "crack Pouch 5g",
             Quantity = 1,
             MetaData = {},
             Time = 1000,
@@ -74,7 +74,7 @@ Config = {
         },
         {
             Name = "joint",
-            DisplayName = "joint",
+            DisplayName = "Joint",
             Quantity = 1,
             MetaData = {},
             Time = 1000,
@@ -86,7 +86,7 @@ Config = {
         },
         {
             Name = "crack",
-            DisplayName = "crack",
+            DisplayName = "Crack",
             Quantity = 50,
             MetaData = {},
             Time = 1000,
