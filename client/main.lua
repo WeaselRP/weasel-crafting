@@ -5,7 +5,7 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-function EnableGui(enable, Crafting, Craftables)
+function EnableGui(enable)
     
     SetNuiFocus(enable, enable)
     guiEnabled = enable
@@ -13,28 +13,31 @@ function EnableGui(enable, Crafting, Craftables)
     SendNUIMessage({
         type = "enableui",
         enable = enable,
-        Level = Crafting
     })
-	if enable then
-		SendNUIMessage({
-			type = "addItems",
-			Items = Craftables
-		})
-	end
 end
 
 RegisterNetEvent("weasel-crafting:openMenu")
 AddEventHandler("weasel-crafting:openMenu", function(Crafting)
-    EnableGui(true, Crafting, Config.Items)
+    EnableGui(true)
+    SendNUIMessage({
+        type = "addCraftingItems",
+        Items = Config.Items,
+        Level = Crafting
+    })
 end)
 
 RegisterNetEvent("weasel-crafting:customMenu")
 AddEventHandler("weasel-crafting:customMenu", function(Items, Crafting)
-    EnableGui(true, Crafting, Items)
+    EnableGui(true)
+    SendNUIMessage({
+        type = "addCraftingItems",
+        Items = Items,
+        Level = Crafting
+    })
 end)
 
 RegisterNUICallback('escape', function(data, cb)
-    EnableGui(false, 0)
+    EnableGui(false)
 
     cb('ok')
 end)
@@ -66,6 +69,7 @@ RegisterNUICallback('craft', function(data, cb)
 
     cb('ok')
 end)
+
 
 is_table_equal = function(t1,t2,ignore_mt) -- Stole right from linden inventory haha
 	local ty1 = type(t1)

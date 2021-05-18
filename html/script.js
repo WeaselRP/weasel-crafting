@@ -5,6 +5,7 @@ document.body.style.display = "none";
 Items = null;
 Level = 0;
 lastID = 0;
+craftBtnText = "Craft Item(s)";
 
 
 function getItemIMG(item){
@@ -14,10 +15,26 @@ function getItemIMG(item){
 function fillData(){
     if (Items != null) {
         $(".grid-container").empty()
+        $(".craftBtn").text(craftBtnText)
         for (i = 0; i < Items.length; i++) {
             if (Items[i].Level <= Level) {
                 $(".grid-container").append("<li class='grid-item' id="+i+"><img class='gridImage' src='"+getItemIMG(Items[i].Name)+"' id='icon'/><p class='itemLabel'>"+Items[i].DisplayName+"</p></li>");
             }
+        }
+    }
+}
+
+function updateList(id, amount){
+    $(".object-name").text(Items[id].DisplayName + " x " + (Items[id].Quantity*amount));
+    $(".crafted-object").empty()
+    $(".ingredients").empty()
+    $(".crafted-object").prepend("<img src='"+getItemIMG(Items[id].Name)+"' id='icon'/>");
+
+    for (i = 0; i < Items[id].Recipe.length; i ++) {
+        if (Items[id].Recipe[i][4]) {
+            $(".ingredients").prepend("<li class='ingredient'>"+Items[id].Recipe[i][2]*amount + " x " + Items[id].Recipe[i][0] +"</li>")
+        } else {
+            $(".ingredients").prepend("<li class='ingredient'>"+Items[id].Recipe[i][2] + " - " + Items[id].Recipe[i][0] +"</li>")
         }
     }
 }
@@ -27,10 +44,14 @@ $(function() {
     window.addEventListener('message', function(event) {
         if (event.data.type == "enableui") {
             document.body.style.display = event.data.enable ? "block" : "none";
-            Level = event.data.Level
-        } else if (event.data.type == "addItems") {
+        } else if (event.data.type == "addCraftingItems") {
             let data = event.data;
             Items = data.Items;
+            Level = event.data.Level;
+            mode = 0;
+            if (data.BtnText != null) {
+                craftBtnText = data.BtnText;
+            }
             fillData();
         }
     });
@@ -53,18 +74,7 @@ $(function() {
             if (amount <= 0) {
                 amount = 1;
             }
-
-            $(".object-name").text(Items[id].DisplayName + " x " + (Items[id].Quantity*amount));
-            $(".crafted-object").empty()
-            $(".ingredients").empty()
-            $(".crafted-object").prepend("<img src='"+getItemIMG(Items[id].Name)+"' id='icon'/>");
-            for (i = 0; i < Items[id].Recipe.length; i ++) {
-                if (Items[lastID].Recipe[i][4]) {
-                    $(".ingredients").prepend("<li class='ingredient'>"+Items[lastID].Recipe[i][2]*amount + " x " + Items[lastID].Recipe[i][0] +"</li>")
-                } else {
-                    $(".ingredients").prepend("<li class='ingredient'>"+Items[lastID].Recipe[i][2] + " - " + Items[lastID].Recipe[i][0] +"</li>")
-                }
-            }
+            updateList(id, amount);
         }
     });
 
@@ -112,18 +122,7 @@ $(function() {
         if (amount <= 0) {
             amount = 1;
         }
-        
-        $(".object-name").text(Items[lastID].DisplayName + " x " + (Items[lastID].Quantity*amount));
-        $(".crafted-object").empty()
-        $(".ingredients").empty()
-        $(".crafted-object").prepend("<img src='"+getItemIMG(Items[lastID].Name)+"' id='icon'/>");
-        for (i = 0; i < Items[lastID].Recipe.length; i ++) {
-            if (Items[lastID].Recipe[i][4]) {
-                $(".ingredients").prepend("<li class='ingredient'>"+Items[lastID].Recipe[i][2]*amount + " x " + Items[lastID].Recipe[i][0] +"</li>")
-            } else {
-                $(".ingredients").prepend("<li class='ingredient'>"+Items[lastID].Recipe[i][2] + " - " + Items[lastID].Recipe[i][0] +"</li>")
-            }
-        }
+        updateList(lastID, amount);
     });
 
 });
