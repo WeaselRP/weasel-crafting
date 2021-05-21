@@ -108,7 +108,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'barrel'},
             Time = 12000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 20, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 10, {type = 'metal'}, true},
@@ -122,7 +122,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'barrel'},
             Time = 45000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 10, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 5, {type = 'metal'}, true},
@@ -137,7 +137,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'barrel'},
             Time = 30000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 10, {type = 'metal'}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
@@ -151,7 +151,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 120000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 50, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 30, {type = 'metal'}, true},
@@ -165,7 +165,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 45000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 40, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 20, {type = 'metal'}, true},
@@ -180,7 +180,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 30000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 30, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 10, {type = 'metal'}, true},
@@ -195,7 +195,7 @@ Config = {
             Quantity = 1,
             MetaData = {},
             Time = 3000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                
                 {'Titanium Ingot', 'titanium_ingot', 3, {type = 'metal'}, true},
@@ -208,7 +208,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 30000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 30, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 15, {type = 'metal'}, true},
@@ -219,7 +219,7 @@ Config = {
         {
             Name = "smg_receiver2",
             DisplayName = "Normal quality SMG",
-            Quantity = 1,
+            Quantity = 2,
             MetaData = {type = 'receiver'},
             Time = 30000,
             Level = 1,
@@ -234,7 +234,7 @@ Config = {
         {
             Name = "smg_receiver3",
             DisplayName = "Low quality SMG",
-            Quantity = 1,
+            Quantity = 2,
             MetaData = {type = 'receiver'},
             Time = 30000,
             Level = 1,
@@ -257,7 +257,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'tool'},
             Time = 30000,
-            Level = 1,
+            Level = 3,
             Recipe = {
                 {'Platinum', 'platinum_ingot', 5, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 50, {type = 'metal'}, true},
@@ -272,7 +272,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'tool'},
             Time = 30000,
-            Level = 1,
+            Level = 3,
             Recipe = {
                 {'Gold Ingots', 'gold_ingot', 5, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 40, {type = 'metal'}, true},
@@ -287,7 +287,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'tool'},
             Time = 30000,
-            Level = 1,
+            Level = 3,
             Recipe = {
                 {'Silver', 'silver_ingot', 5, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 30, {type = 'metal'}, true},
@@ -301,9 +301,9 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'oil'},
             Time = 5000,
-            Level = 1,
+            Level = 3,
             Recipe = {
-                {'Barrel of Oil', 'oil_barrel', 1, {}, true},
+                {'Barrel of Oil', 'oil_barrel', 1, {type='oil'}, true},
                 {'hydrogen peroxide', 'hydrogen_peroxide450ml', 1, {}, true} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
         },
@@ -318,7 +318,7 @@ Config = {
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
             Time = 45000,
-            Level = 1,
+            Level = 4,
             Recipe = {
                 {'Low quality SMG', 'smg_receiver3', 1, {type = 'receiver'}, true},
                 {'Low Quality Barrel', 'ar_barrel3', 1, {type = 'barrel'}, true}
@@ -330,7 +330,7 @@ Config = {
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
             Time = 45000,
-            Level = 1,
+            Level = 4,
             Recipe = {
                 {'Normal quality SMG', 'smg_receiver2', 1, {type = 'receiver'}, true},
                 {'Normal Quality Barrel', 'ar_barrel2', 1, {type = 'barrel'}, true},
@@ -343,7 +343,7 @@ Config = {
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
             Time = 45000,
-            Level = 1,
+            Level = 4,
             Recipe = {
                 {'High quality SMG', 'smg_receiver1', 1, {type = 'receiver'}, true},
                 {'Normal Quality Barrel', 'ar_barrel2', 1, {type = 'barrel'}, true},
@@ -356,7 +356,7 @@ Config = {
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
             Time = 60000,
-            Level = 1,
+            Level = 4,
             Recipe = {
                 {'High quality SMG', 'smg_receiver1', 1, {type = 'receiver'}, true},
                 {'High Quality Barrel', 'ar_barrel1', 1, {type = 'barrel'}, true},
@@ -366,12 +366,12 @@ Config = {
         {
             Name = "WEAPON_ASSAULTRIFLE",
             DisplayName = "AK-47",
-            Quantity = 1,
+            Quantity = 4,
             MetaData = {serial="Unregistered", durability=100},
             Time = 120000,
             Level = 1,
             Recipe = {
-                {'Normal quality AR', 'ar_receiver1', 1, {type = 'receiver'}, true},
+                {'High Quality AR', 'ar_receiver1', 1, {type = 'receiver'}, true},
                 {'High Quality Barrel', 'ar_barrel1', 1, {type = 'barrel'}, true},
                 {'Milling Lubricant', 'cutting_oil', 3, {type = 'oil'}, true}
             }
