@@ -108,7 +108,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'barrel'},
             Time = 12000,
-            Level = 2,
+            Level = 4,
             Recipe = {
                 {'Steel', 'steel_ingot', 20, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 10, {type = 'metal'}, true},
@@ -122,7 +122,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'barrel'},
             Time = 45000,
-            Level = 2,
+            Level = 3,
             Recipe = {
                 {'Steel', 'steel_ingot', 10, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 5, {type = 'metal'}, true},
@@ -151,7 +151,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 120000,
-            Level = 2,
+            Level = 4,
             Recipe = {
                 {'Steel', 'steel_ingot', 50, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 30, {type = 'metal'}, true},
@@ -165,7 +165,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 45000,
-            Level = 2,
+            Level = 3,
             Recipe = {
                 {'Steel', 'steel_ingot', 40, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 20, {type = 'metal'}, true},
@@ -208,7 +208,7 @@ Config = {
             Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 30000,
-            Level = 2,
+            Level = 4,
             Recipe = {
                 {'Steel', 'steel_ingot', 30, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 15, {type = 'metal'}, true},
@@ -222,7 +222,7 @@ Config = {
             Quantity = 2,
             MetaData = {type = 'receiver'},
             Time = 30000,
-            Level = 1,
+            Level = 3,
             Recipe = {
                 {'Steel', 'steel_ingot', 25, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 10, {type = 'metal'}, true},
@@ -237,7 +237,7 @@ Config = {
             Quantity = 2,
             MetaData = {type = 'receiver'},
             Time = 30000,
-            Level = 1,
+            Level = 2,
             Recipe = {
                 {'Steel', 'steel_ingot', 20, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 5, {type = 'metal'}, true},
@@ -259,7 +259,7 @@ Config = {
             Time = 30000,
             Level = 3,
             Recipe = {
-                {'Platinum', 'platinum_ingot', 5, {type = 'metal'}, true},
+                {'Tungsten Ingot', 'tungsten_ingot', 5, {type = 'metal'}, true},
                 {'Titanium Ingot', 'titanium_ingot', 50, {type = 'metal'}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Ceramic Tooling', 'cutting_tool2', 1, {type = 'tool'}, true},
@@ -369,7 +369,7 @@ Config = {
             Quantity = 4,
             MetaData = {serial="Unregistered", durability=100},
             Time = 120000,
-            Level = 1,
+            Level = 5,
             Recipe = {
                 {'High Quality AR', 'ar_receiver1', 1, {type = 'receiver'}, true},
                 {'High Quality Barrel', 'ar_barrel1', 1, {type = 'barrel'}, true},
