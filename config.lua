@@ -2,6 +2,17 @@
 Config = {
     Items = {
         {
+            Name = "corn_seed",
+            DisplayName = "Corn Seed",
+            Quantity = 12,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'Corn', 'corn', 1, {}, true},
+            }
+        },
+        {
             Name = "weed_pouch",
             DisplayName = "Weed Pouch 1oz",
             Quantity = 1,
