@@ -99,7 +99,7 @@ function hasItems(Item, amount)
         if not v.metadata then v.metadata = {} end
         for i = 1, #Item.Recipe, 1 do
             if count[i] == nil then count[i] = 0 end
-            if v.name == Item.Recipe[i][2] and is_table_equal(v.metadata, Item.Recipe[i][4]) or Item.Recipe[i][4] == {}  then
+            if v.name == Item.Recipe[i][2] and is_table_equal(v.metadata, Item.Recipe[i][4]) or next(Item.Recipe[i][4]) == nil then
                 count[i] = count[i] + v.count
             end
         end
