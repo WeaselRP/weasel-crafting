@@ -110,8 +110,8 @@ Config = {
             Time = 12000,
             Level = 4,
             Recipe = {
-                {'Steel', 'steel_ingot', 20, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 10, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 20, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 10, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Tungsten Carbide Tooling', 'cutting_tool1', 1, {type = 'tool'}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
@@ -124,8 +124,8 @@ Config = {
             Time = 45000,
             Level = 3,
             Recipe = {
-                {'Steel', 'steel_ingot', 10, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 5, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 10, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 5, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Ceramic Tooling', 'cutting_tool2', 1, {type = 'tool'}, false}
                 -- Displayname, Item Name, Amount needed, metadata, consumed
@@ -139,7 +139,7 @@ Config = {
             Time = 30000,
             Level = 2,
             Recipe = {
-                {'Steel', 'steel_ingot', 10, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 10, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Steel Tooling', 'cutting_tool3', 1, {type = 'tool'}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
@@ -153,8 +153,8 @@ Config = {
             Time = 120000,
             Level = 4,
             Recipe = {
-                {'Steel', 'steel_ingot', 50, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 30, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 50, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 30, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Tungsten Carbide Tooling', 'cutting_tool1', 1, {type = 'tool'}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
@@ -167,8 +167,8 @@ Config = {
             Time = 45000,
             Level = 3,
             Recipe = {
-                {'Steel', 'steel_ingot', 40, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 20, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 40, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 20, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Ceramic Tooling', 'cutting_tool2', 1, {type = 'tool'}, false}
                 -- Displayname, Item Name, Amount needed, metadata, consumed
@@ -182,8 +182,8 @@ Config = {
             Time = 30000,
             Level = 2,
             Recipe = {
-                {'Steel', 'steel_ingot', 30, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 10, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 30, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 10, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Steel Tooling', 'cutting_tool3', 1, {type = 'tool'}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
@@ -198,8 +198,8 @@ Config = {
             Level = 2,
             Recipe = {
                
-                {'Titanium Ingot', 'titanium_ingot', 3, {type = 'metal'}, true},
-                {'Steel Tooling', 'cutting_tool3', 1, {type = 'metal'}, false}
+                {'Titanium Ingot', 'titanium_ingot', 3, {}, true},
+                {'Steel Tooling', 'cutting_tool3', 1, {}, false}
             }
         },
         {
@@ -210,8 +210,8 @@ Config = {
             Time = 30000,
             Level = 4,
             Recipe = {
-                {'Steel', 'steel_ingot', 30, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 15, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 30, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 15, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 2, {type = 'oil'}, true},
                 {'Tungsten Carbide Tooling', 'cutting_tool1', 1, {type = 'tool'}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
@@ -224,8 +224,8 @@ Config = {
             Time = 30000,
             Level = 3,
             Recipe = {
-                {'Steel', 'steel_ingot', 25, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 10, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 25, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 10, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Ceramic Tooling', 'cutting_tool2', 1, {type = 'tool'}, false},
                  -- Displayname, Item Name, Amount needed, metadata, consumed
@@ -239,8 +239,8 @@ Config = {
             Time = 30000,
             Level = 2,
             Recipe = {
-                {'Steel', 'steel_ingot', 20, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 5, {type = 'metal'}, true},
+                {'Steel', 'steel_ingot', 20, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 5, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Steel Tooling', 'cutting_tool3', 1, {type = 'tool'}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
@@ -259,8 +259,8 @@ Config = {
             Time = 30000,
             Level = 3,
             Recipe = {
-                {'Tungsten Ingot', 'tungsten_ingot', 5, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 50, {type = 'metal'}, true},
+                {'Tungsten Ingot', 'tungsten_ingot', 5, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 50, {}, true},
                 {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true},
                 {'Ceramic Tooling', 'cutting_tool2', 1, {type = 'tool'}, true},
                 {'Tongs', 'tongs', 1, {}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
@@ -274,8 +274,8 @@ Config = {
             Time = 30000,
             Level = 3,
             Recipe = {
-                {'Gold Ingots', 'gold_ingot', 5, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 40, {type = 'metal'}, true},
+                {'Gold Ingots', 'gold_ingot', 5, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 40, {}, true},
                 {'Steel Tooling', 'cutting_tool3', 1, {type = 'tool'}, true},
                 {'Tongs', 'tongs', 1, {}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
@@ -289,9 +289,9 @@ Config = {
             Time = 30000,
             Level = 3,
             Recipe = {
-                {'Silver', 'silver_ingot', 5, {type = 'metal'}, true},
-                {'Titanium Ingot', 'titanium_ingot', 30, {type = 'metal'}, true},
-                {'Steel', 'steel_ingot', 50, {type = 'metal'}, true},
+                {'Silver', 'silver_ingot', 5, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 30, {}, true},
+                {'Steel', 'steel_ingot', 50, {}, true},
                 {'Tongs', 'tongs', 1, {}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
             }
         },
