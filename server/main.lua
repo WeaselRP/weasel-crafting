@@ -31,7 +31,12 @@ AddEventHandler("weasel-crafting:craftItem", function(data)
         if not data.Item.Recipe[i][5] then
             amount = 1
         end
-        local xItem = xPlayer.getInventoryItem(data.Item.Recipe[i][2], data.Item.Recipe[i][4])
+        local metaData = nil
+        if next(data.Item.Recipe[i][4]) then
+            metaData = data.Item.Recipe[i][4]
+        end
+
+        local xItem = xPlayer.getInventoryItem(data.Item.Recipe[i][2], metaData)
         if xItem.count < (data.Item.Recipe[i][3]*amount) then
             hasItems = false
             break
@@ -40,8 +45,12 @@ AddEventHandler("weasel-crafting:craftItem", function(data)
     end
     if hasItems then 
         for i = 1, #data.Item.Recipe, 1 do
+            local metaData = nil
+            if next(data.Item.Recipe[i][4]) then
+                metaData = data.Item.Recipe[i][4]
+            end
             if data.Item.Recipe[i][5] then 
-                xPlayer.removeInventoryItem(data.Item.Recipe[i][2], math.floor(data.Item.Recipe[i][3]*data.Amount), data.Item.Recipe[i][4])
+                xPlayer.removeInventoryItem(data.Item.Recipe[i][2], math.floor(data.Item.Recipe[i][3]*data.Amount), metaData)
             end
         end
         xPlayer.addInventoryItem(data.Item.Name, math.floor(data.Item.Quantity*data.Amount), data.Item.MetaData)
