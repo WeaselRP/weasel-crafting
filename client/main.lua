@@ -36,6 +36,17 @@ AddEventHandler("weasel-crafting:customMenu", function(Items, Crafting)
     })
 end)
 
+RegisterNetEvent("weasel-crafting:openShop")
+AddEventHandler("weasel-crafting:openShop", function(Items)
+    EnableGui(true)
+    SendNUIMessage({
+        type = "addShopItems",
+        Items = Items,
+        BtnText = "Sell Item(s)",
+        Level = 1
+    })
+end)
+
 RegisterNUICallback('escape', function(data, cb)
     EnableGui(false)
 

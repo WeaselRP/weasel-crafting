@@ -5,6 +5,7 @@ document.body.style.display = "none";
 Items = null;
 Level = 0;
 lastID = 0;
+mode = 0;
 craftBtnText = "Craft Item(s)";
 
 
@@ -18,24 +19,36 @@ function fillData(){
         $(".craftBtn").text(craftBtnText)
         for (i = 0; i < Items.length; i++) {
             if (Items[i].Level <= Level) {
-                $(".grid-container").append("<li class='grid-item' id="+i+"><img class='gridImage' src='"+getItemIMG(Items[i].Name)+"' id='icon'/><p class='itemLabel'>"+Items[i].DisplayName+"</p></li>");
+                if(mode == 0){
+                    $(".grid-container").append("<li class='grid-item' id="+i+"><img class='gridImage' src='"+getItemIMG(Items[i].Name)+"' id='icon'/><p class='itemLabel'>"+Items[i].DisplayName+"</p></li>");
+                }else if (mode == 1){
+                    $(".grid-container").append("<li class='grid-item' id="+i+"><img class='gridImage' src='"+getItemIMG(Items[i].Recipe[0][1])+"' id='icon'/><p class='itemLabel'>"+Items[i].Recipe[0][0]+"</p></li>");
+                }
             }
         }
     }
 }
 
 function updateList(id, amount){
-    $(".object-name").text(Items[id].DisplayName + " x " + (Items[id].Quantity*amount));
     $(".crafted-object").empty()
     $(".ingredients").empty()
-    $(".crafted-object").prepend("<img src='"+getItemIMG(Items[id].Name)+"' id='icon'/>");
 
-    for (i = 0; i < Items[id].Recipe.length; i ++) {
-        if (Items[id].Recipe[i][4]) {
-            $(".ingredients").prepend("<li class='ingredient'>"+Items[id].Recipe[i][2]*amount + " x " + Items[id].Recipe[i][0] +"</li>")
-        } else {
-            $(".ingredients").prepend("<li class='ingredient'>"+Items[id].Recipe[i][2] + " - " + Items[id].Recipe[i][0] +"</li>")
+    if(mode == 0){
+        $(".object-name").text(Items[id].DisplayName + " x " + (Items[id].Quantity*amount));
+        
+        $(".crafted-object").prepend("<img src='"+getItemIMG(Items[id].Name)+"' id='icon'/>");
+
+        for (i = 0; i < Items[id].Recipe.length; i ++) {
+            if (Items[id].Recipe[i][4]) {
+                $(".ingredients").prepend("<li class='ingredient'>"+Items[id].Recipe[i][2]*amount + " x " + Items[id].Recipe[i][0] +"</li>");
+            } else {
+                $(".ingredients").prepend("<li class='ingredient'>"+Items[id].Recipe[i][2] + " - " + Items[id].Recipe[i][0] +"</li>");
+            }
         }
+    }else if (mode == 1) {
+        $(".object-name").text(Items[id].Recipe[0][0] + " x " + (Items[id].Recipe[0][2]*amount));
+        $(".crafted-object").prepend("<img src='"+getItemIMG(Items[id].Recipe[0][1])+"' id='icon'/>");
+        $(".ingredients").prepend("<li class='ingredient'>$"+Items[id].Quantity*amount + "</li>");
     }
 }
 
@@ -49,6 +62,15 @@ $(function() {
             Items = data.Items;
             Level = event.data.Level;
             mode = 0;
+            if (data.BtnText != null) {
+                craftBtnText = data.BtnText;
+            }
+            fillData();
+        }else if (event.data.type == "addShopItems") {
+            let data = event.data;
+            Items = data.Items;
+            Level = event.data.Level;
+            mode = 1;
             if (data.BtnText != null) {
                 craftBtnText = data.BtnText;
             }
