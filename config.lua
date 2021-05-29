@@ -386,6 +386,18 @@ Config = {
                 {'High Quality Barrel', 'ar_barrel1', 1, {type = 'barrel'}, true},
                 {'Milling Lubricant', 'cutting_oil', 3, {type = 'oil'}, true}
             }
+        },
+
+        --Misc
+        {
+            Name = "WEAPON_MOLOTOV",
+            DisplayName = "Molotov",
+            Quantity = 1,
+            Time = 5000,
+            Level = 2,
+            Recipe = {
+                {'Vodka', 'bottle-vodka', 1, {}, true}
+            }
         }
         
     }
