@@ -61,6 +61,18 @@ Config = {
             }
         },
         {
+            Name = "dmt_pouch",
+            DisplayName = "dmt Pouch 1g",
+            Quantity = 1,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'DMT', 'dmt', 1, {}, true},
+                {'Plastic Pouch', 'plastic_pouch', 1, {}, true}
+            }
+        },
+        {
             Name = "pseudoephedrine_powder",
             DisplayName = "Pseudoephedrine Powder",
             Quantity = 50,
@@ -230,7 +242,7 @@ Config = {
         {
             Name = "smg_receiver2",
             DisplayName = "Normal quality SMG",
-            Quantity = 2,
+            Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 30000,
             Level = 3,
@@ -245,7 +257,7 @@ Config = {
         {
             Name = "smg_receiver3",
             DisplayName = "Low quality SMG",
-            Quantity = 2,
+            Quantity = 1,
             MetaData = {type = 'receiver'},
             Time = 30000,
             Level = 2,
@@ -362,6 +374,19 @@ Config = {
             }
         },
         {
+            Name = "weapon_smg",
+            DisplayName = "MP5",
+            Quantity = 1,
+            MetaData = {serial="Unregistered", durability=100},
+            Time = 45000,
+            Level = 4,
+            Recipe = {
+                {'High quality SMG', 'smg_receiver1', 1, {type = 'receiver'}, true},
+                {'Normal Quality Barrel', 'ar_barrel2', 1, {type = 'barrel'}, true},
+                {'Milling Lubricant', 'cutting_oil', 1, {type = 'oil'}, true}
+            }
+        },
+        {
             Name = "WEAPON_GUSENBERG",
             DisplayName = "Tommy Gun",
             Quantity = 1,
@@ -396,7 +421,8 @@ Config = {
             Time = 5000,
             Level = 2,
             Recipe = {
-                {'Vodka', 'bottle-vodka', 1, {}, true}
+                {'Vodka', 'bottle-vodka', 1, {}, true},
+                {'Bandage', 'bandage', 1, {}, true}
             }
         }
         

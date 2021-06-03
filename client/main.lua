@@ -22,6 +22,7 @@ AddEventHandler("weasel-crafting:openMenu", function(Crafting)
     SendNUIMessage({
         type = "addCraftingItems",
         Items = Config.Items,
+        BtnText = "Craft Item(s)",
         Level = Crafting
     })
 end)
@@ -32,6 +33,7 @@ AddEventHandler("weasel-crafting:customMenu", function(Items, Crafting)
     SendNUIMessage({
         type = "addCraftingItems",
         Items = Items,
+        BtnText = "Craft Item(s)",
         Level = Crafting
     })
 end)
