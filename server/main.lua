@@ -44,6 +44,7 @@ AddEventHandler("weasel-crafting:craftItem", function(data)
         hasItems = true
     end
     if hasItems then 
+        local ItemNames = ""
         for i = 1, #data.Item.Recipe, 1 do
             local metaData = nil
             if next(data.Item.Recipe[i][4]) then
@@ -51,7 +52,11 @@ AddEventHandler("weasel-crafting:craftItem", function(data)
             end
             if data.Item.Recipe[i][5] then 
                 xPlayer.removeInventoryItem(data.Item.Recipe[i][2], math.floor(data.Item.Recipe[i][3]*data.Amount), metaData)
+                ItemNames = ItemNames..data.Item.Recipe[i][1].." "
             end
+        end
+        if data.Item.Name == "money" or data.Item.Name == "black_money" then
+            TriggerEvent("weasel-analytics:logTransaction", data.Item.Name, math.floor(data.Item.Quantity*data.Amount), xPlayer.getName(), "Item Sale: "..ItemNames)
         end
         xPlayer.addInventoryItem(data.Item.Name, math.floor(data.Item.Quantity*data.Amount), data.Item.MetaData)
         success(source, "You have crafted "..math.floor(data.Item.Quantity*data.Amount).."x "..data.Item.DisplayName)
