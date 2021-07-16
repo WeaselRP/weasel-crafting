@@ -424,7 +424,55 @@ Config = {
                 {'Vodka', 'bottle-vodka', 1, {}, true},
                 {'Bandage', 'bandage', 1, {}, true}
             }
-        }
+        },
+        {
+            Name = "ammo-rifle",
+            DisplayName = "5.56 Bullets",
+            Quantity = 10,
+            Time = 45000,
+            Level = 5,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, true},
+                {'Brass Ingot', 'brass_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true},
+            }
+        },
+        {
+            Name = "ammo-rifle2",
+            DisplayName = "7.62 Bullets",
+            Quantity = 10,
+            Time = 45000,
+            Level = 5,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, true},
+                {'Brass Ingot', 'brass_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true},
+            }
+        },
+        {
+            Name = "ammo-45",
+            DisplayName = ".45 ACP Bullets",
+            Quantity = 10,
+            Time = 45000,
+            Level = 4,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, true},
+                {'Brass Ingot', 'brass_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true},
+            }
+        },
+        {
+            Name = "ammo-9",
+            DisplayName = "9mm Bullets",
+            Quantity = 10,
+            Time = 45000,
+            Level = 4,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, true},
+                {'Brass Ingot', 'brass_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true},
+            }
+        },
         
     }
 }
