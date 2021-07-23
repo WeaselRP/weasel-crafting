@@ -446,7 +446,7 @@ Config = {
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, true},
                 {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true}
             }
         },
         {
@@ -458,7 +458,7 @@ Config = {
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, true},
                 {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true}
             }
         },
         {
@@ -470,7 +470,7 @@ Config = {
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, true},
                 {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true}
             }
         },
         {
@@ -482,7 +482,18 @@ Config = {
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, true},
                 {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true},
+                {'Lead Ingot', 'lead_ingot', 1, true}
+            }
+        },
+        {
+            Name = "thermite_charge_iron",
+            DisplayName = "Iron Thermite",
+            Quantity = 1,
+            Time = 45000,
+            Level = 3,
+            Recipe = {
+                {'Iron Ingot', 'iron_ingot', 30, true},
+                {'Aluminum Ingot', 'aluminum_ingot', 30, true}
             }
         },
         
