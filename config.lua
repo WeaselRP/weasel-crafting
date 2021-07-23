@@ -374,7 +374,7 @@ Config = {
             }
         },
         {
-            Name = "weapon_smg",
+            Name = "WEAPON_SMG",
             DisplayName = "MP5",
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
@@ -426,7 +426,19 @@ Config = {
             }
         },
         {
-            Name = "ammo-rifle",
+            Name = "WEAPON_KNUCKLE",
+            DisplayName = "Knuckle Duster",
+            Quantity = 1,
+            MetaData = {serial="Unregistered", durability=100},
+            Time = 5000,
+            Level = 2,
+            Recipe = {
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 2, {}, true}
+            }
+        },
+        {
+            Name = "AMMO-RIFLE",
             DisplayName = "5.56 Bullets",
             Quantity = 10,
             Time = 45000,
@@ -438,7 +450,7 @@ Config = {
             }
         },
         {
-            Name = "ammo-rifle2",
+            Name = "AMMO-RIFLE2",
             DisplayName = "7.62 Bullets",
             Quantity = 10,
             Time = 45000,
@@ -450,7 +462,7 @@ Config = {
             }
         },
         {
-            Name = "ammo-45",
+            Name = "AMMO-45",
             DisplayName = ".45 ACP Bullets",
             Quantity = 10,
             Time = 45000,
@@ -462,7 +474,7 @@ Config = {
             }
         },
         {
-            Name = "ammo-9",
+            Name = "AMMO-9",
             DisplayName = "9mm Bullets",
             Quantity = 10,
             Time = 45000,
