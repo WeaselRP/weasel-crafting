@@ -444,9 +444,9 @@ Config = {
             Time = 45000,
             Level = 5,
             Recipe = {
-                {'Gunpowder', 'gunpowder', 1, true},
-                {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true}
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
             }
         },
         {
@@ -456,9 +456,9 @@ Config = {
             Time = 45000,
             Level = 5,
             Recipe = {
-                {'Gunpowder', 'gunpowder', 1, true},
-                {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true}
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
             }
         },
         {
@@ -468,9 +468,9 @@ Config = {
             Time = 45000,
             Level = 4,
             Recipe = {
-                {'Gunpowder', 'gunpowder', 1, true},
-                {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true}
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
             }
         },
         {
@@ -480,9 +480,9 @@ Config = {
             Time = 45000,
             Level = 4,
             Recipe = {
-                {'Gunpowder', 'gunpowder', 1, true},
-                {'Brass Ingot', 'brass_ingot', 1, true},
-                {'Lead Ingot', 'lead_ingot', 1, true}
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
             }
         },
         {
@@ -492,8 +492,8 @@ Config = {
             Time = 45000,
             Level = 3,
             Recipe = {
-                {'Iron Ingot', 'iron_ingot', 30, true},
-                {'Aluminum Ingot', 'aluminum_ingot', 30, true}
+                {'Iron Ingot', 'iron_ingot', 30, {}, true},
+                {'Aluminum Ingot', 'aluminum_ingot', 30, {}, true}
             }
         },
         
