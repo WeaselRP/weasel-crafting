@@ -438,7 +438,7 @@ Config = {
             }
         },
         {
-            Name = "AMMO-RIFLE",
+            Name = "ammo-rifle",
             DisplayName = "5.56 Bullets",
             Quantity = 10,
             Time = 45000,
@@ -450,7 +450,7 @@ Config = {
             }
         },
         {
-            Name = "AMMO-RIFLE2",
+            Name = "ammo-rifle2",
             DisplayName = "7.62 Bullets",
             Quantity = 10,
             Time = 45000,
@@ -462,7 +462,7 @@ Config = {
             }
         },
         {
-            Name = "AMMO-45",
+            Name = "ammo-45",
             DisplayName = ".45 ACP Bullets",
             Quantity = 10,
             Time = 45000,
@@ -474,7 +474,7 @@ Config = {
             }
         },
         {
-            Name = "AMMO-9",
+            Name = "ammo-9",
             DisplayName = "9mm Bullets",
             Quantity = 10,
             Time = 45000,
