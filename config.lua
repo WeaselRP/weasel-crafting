@@ -430,7 +430,7 @@ Config = {
             DisplayName = "Knuckle Duster",
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
-            Time = 5000,
+            Time = 15000,
             Level = 2,
             Recipe = {
                 {'Brass Ingot', 'brass_ingot', 1, {}, true},
@@ -453,7 +453,7 @@ Config = {
             Name = "ammo-rifle2",
             DisplayName = "7.62 Bullets",
             Quantity = 10,
-            Time = 45000,
+            Time = 1000,
             Level = 5,
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, {}, true},
@@ -465,7 +465,7 @@ Config = {
             Name = "ammo-45",
             DisplayName = ".45 ACP Bullets",
             Quantity = 10,
-            Time = 45000,
+            Time = 1000,
             Level = 4,
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, {}, true},
@@ -477,7 +477,7 @@ Config = {
             Name = "ammo-9",
             DisplayName = "9mm Bullets",
             Quantity = 10,
-            Time = 45000,
+            Time = 1000,
             Level = 4,
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, {}, true},
