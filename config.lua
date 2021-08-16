@@ -73,6 +73,41 @@ Config = {
             }
         },
         {
+            Name = "morphine_pouch",
+            DisplayName = "Morphine Pouch 5g",
+            Quantity = 1,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'Morphine', 'morphine', 5, {}, true},
+                {'Plastic Pouch', 'plastic_pouch', 1, {}, true}
+            }
+        },
+        {
+            Name = "morphine",
+            DisplayName = "Morphine",
+            Quantity = 5,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'Morphine Pouch 5g', 'morphine_pouch', 1, {}, true}
+            }
+        },
+        {
+            Name = "heroin_pouch",
+            DisplayName = "Heroin Pouch 1g",
+            Quantity = 1,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'Heroin', 'heroin', 1, {}, true},
+                {'Plastic Pouch', 'plastic_pouch', 1, {}, true}
+            }
+        },
+        {
             Name = "pseudoephedrine_powder",
             DisplayName = "Pseudoephedrine Powder",
             Quantity = 50,
@@ -117,6 +152,21 @@ Config = {
             Recipe = {
                 {'Coke', 'coke', 40, {}, true},
                 {'Baking Soda', 'bakingsoda', 2, {}, true}
+            }
+        },
+
+        {
+            Name = "firstaidkit",
+            DisplayName = "Makeshift First Aid Kit",
+            Quantity = 1,
+            MetaData = {},
+            Time = 10000,
+            Level = 2,
+            Recipe = {
+                {'Morphine', 'morphine', 5, {}, true},
+                {'Bandage', 'bandage', 3, {}, true},
+                {'Water', 'water', 2, {}, true},
+                {'Vodka', 'bottle-vodka', 1, {}, true}
             }
         },
 
