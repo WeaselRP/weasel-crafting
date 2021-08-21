@@ -129,7 +129,6 @@ function hasItems(Item, amount)
         end
     end
     return hasItems
-
 end
 
 
@@ -138,9 +137,7 @@ Citizen.CreateThread(function()
         if guiEnabled then
             DisableControlAction(0, 1, guiEnabled) -- LookLeftRight
             DisableControlAction(0, 2, guiEnabled) -- LookUpDown
-
             DisableControlAction(0, 142, guiEnabled) -- MeleeAttackAlternate
-
             DisableControlAction(0, 106, guiEnabled) -- VehicleMouseControlOverride
         end
         Citizen.Wait(0)

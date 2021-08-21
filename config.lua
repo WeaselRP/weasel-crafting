@@ -319,15 +319,46 @@ Config = {
             }
         },
         {
-            Name = "cutting_oil",
-            DisplayName = "Milling Lubricant",
+            Name = "cutting_tool3",
+            DisplayName = "Steel Tooling",
             Quantity = 1,
-            MetaData = {type = 'oil'},
-            Time = 5000,
+            MetaData = {type = 'tool'},
+            Time = 30000,
             Level = 3,
             Recipe = {
-                {'Barrel of Oil', 'oil_barrel', 1, {type='oil'}, true},
-                {'hydrogen peroxide', 'hydrogen_peroxide450ml', 1, {}, true} -- Displayname, Item Name, Amount needed, metadata, consumed
+                {'Silver', 'silver_ingot', 5, {}, true},
+                {'Titanium Ingot', 'titanium_ingot', 30, {}, true},
+                {'Steel', 'steel_ingot', 50, {}, true},
+                {'Tongs', 'tongs', 1, {}, false} -- Displayname, Item Name, Amount needed, metadata, consumed
+            }
+        },
+
+        --------------AMMO ------------------------------
+
+        {
+            Name = "ammo-45",
+            DisplayName = ".45ACP",
+            Quantity = 1200,
+            MetaData = {},
+            Time = 30000,
+            Level = 1,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass', 'brass_ingot', 3, {}, true}, 
+                {'Lead', 'lead_ingot', 1, {}, true} 
+            }
+        },
+        {
+            Name = "ammo-rifle2",
+            DisplayName = "7.62x39",
+            Quantity = 1000,
+            MetaData = {},
+            Time = 30000,
+            Level = 1,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass', 'brass_ingot', 3, {}, true},
+                {'Lead', 'lead_ingot', 1, {}, true} 
             }
         },
         ----------------------------------------
@@ -374,7 +405,7 @@ Config = {
             }
         },
         {
-            Name = "weapon_smg",
+            Name = "WEAPON_SMG_MK2",
             DisplayName = "MP5",
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
@@ -418,11 +449,35 @@ Config = {
             Name = "WEAPON_MOLOTOV",
             DisplayName = "Molotov",
             Quantity = 1,
-            Time = 5000,
+            Time = 30000,
             Level = 2,
             Recipe = {
                 {'Vodka', 'bottle-vodka', 1, {}, true},
                 {'Bandage', 'bandage', 1, {}, true}
+            }
+        },
+
+        {
+            Name = "thermite_charge_iron",
+            DisplayName = "Iron Thermite",
+            Quantity = 1,
+            Time = 90000,
+            Level = 2,
+            Recipe = {
+                {'Iron', 'iron_ingot', 30, {}, true},
+                {'Aluminum', 'aluminum_ingot', 30, {}, true}
+            }
+        },
+
+        {
+            Name = "thermite_charge_titanium",
+            DisplayName = "Titanium Thermite",
+            Quantity = 1,
+            Time = 90000,
+            Level = 2,
+            Recipe = {
+                {'Iron', 'titanium_ingot', 30, {}, true},
+                {'Aluminum', 'aluminum_ingot', 30, {}, true}
             }
         }
         
