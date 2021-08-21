@@ -14,6 +14,10 @@ function EnableGui(enable)
         type = "enableui",
         enable = enable,
     })
+
+    if enable then
+        TriggerScreenblurFadeIn(0)
+    else TriggerScreenblurFadeOut(0) end
 end
 
 RegisterNetEvent("weasel-crafting:openMenu")

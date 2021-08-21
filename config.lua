@@ -73,6 +73,41 @@ Config = {
             }
         },
         {
+            Name = "morphine_pouch",
+            DisplayName = "Morphine Pouch 5g",
+            Quantity = 1,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'Morphine', 'morphine', 5, {}, true},
+                {'Plastic Pouch', 'plastic_pouch', 1, {}, true}
+            }
+        },
+        {
+            Name = "morphine",
+            DisplayName = "Morphine",
+            Quantity = 5,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'Morphine Pouch 5g', 'morphine_pouch', 1, {}, true}
+            }
+        },
+        {
+            Name = "heroin_pouch",
+            DisplayName = "Heroin Pouch 1g",
+            Quantity = 1,
+            MetaData = {},
+            Time = 1000,
+            Level = 1,
+            Recipe = {
+                {'Heroin', 'heroin', 1, {}, true},
+                {'Plastic Pouch', 'plastic_pouch', 1, {}, true}
+            }
+        },
+        {
             Name = "pseudoephedrine_powder",
             DisplayName = "Pseudoephedrine Powder",
             Quantity = 50,
@@ -117,6 +152,21 @@ Config = {
             Recipe = {
                 {'Coke', 'coke', 40, {}, true},
                 {'Baking Soda', 'bakingsoda', 2, {}, true}
+            }
+        },
+
+        {
+            Name = "firstaidkit",
+            DisplayName = "Makeshift First Aid Kit",
+            Quantity = 1,
+            MetaData = {},
+            Time = 10000,
+            Level = 2,
+            Recipe = {
+                {'Morphine', 'morphine', 5, {}, true},
+                {'Bandage', 'bandage', 3, {}, true},
+                {'Water', 'water', 2, {}, true},
+                {'Vodka', 'bottle-vodka', 1, {}, true}
             }
         },
 
@@ -405,7 +455,11 @@ Config = {
             }
         },
         {
+<<<<<<< HEAD
             Name = "WEAPON_SMG_MK2",
+=======
+            Name = "WEAPON_SMG",
+>>>>>>> 7c267d4ccc60c44d5e76a8ff595e6bcd8f822cd6
             DisplayName = "MP5",
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
@@ -456,6 +510,7 @@ Config = {
                 {'Bandage', 'bandage', 1, {}, true}
             }
         },
+<<<<<<< HEAD
 
         {
             Name = "thermite_charge_iron",
@@ -480,6 +535,79 @@ Config = {
                 {'Aluminum', 'aluminum_ingot', 30, {}, true}
             }
         }
+=======
+        {
+            Name = "WEAPON_KNUCKLE",
+            DisplayName = "Knuckle Duster",
+            Quantity = 1,
+            MetaData = {serial="Unregistered", durability=100},
+            Time = 15000,
+            Level = 2,
+            Recipe = {
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 2, {}, true}
+            }
+        },
+        {
+            Name = "ammo-rifle",
+            DisplayName = "5.56 Bullets",
+            Quantity = 10,
+            Time = 45000,
+            Level = 5,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
+            }
+        },
+        {
+            Name = "ammo-rifle2",
+            DisplayName = "7.62 Bullets",
+            Quantity = 10,
+            Time = 1000,
+            Level = 5,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
+            }
+        },
+        {
+            Name = "ammo-45",
+            DisplayName = ".45 ACP Bullets",
+            Quantity = 10,
+            Time = 1000,
+            Level = 4,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
+            }
+        },
+        {
+            Name = "ammo-9",
+            DisplayName = "9mm Bullets",
+            Quantity = 10,
+            Time = 1000,
+            Level = 4,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
+            }
+        },
+        {
+            Name = "thermite_charge_iron",
+            DisplayName = "Iron Thermite",
+            Quantity = 1,
+            Time = 45000,
+            Level = 3,
+            Recipe = {
+                {'Iron Ingot', 'iron_ingot', 30, {}, true},
+                {'Aluminum Ingot', 'aluminum_ingot', 30, {}, true}
+            }
+        },
+>>>>>>> 7c267d4ccc60c44d5e76a8ff595e6bcd8f822cd6
         
     }
 }
