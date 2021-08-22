@@ -29,6 +29,7 @@ AddEventHandler("weasel-crafting:openMenu", function(Crafting)
         BtnText = "Craft Item(s)",
         Level = Crafting
     })
+    TriggerEvent("weasel-base:windowCheck", true)
 end)
 
 RegisterNetEvent("weasel-crafting:customMenu")
@@ -55,7 +56,7 @@ end)
 
 RegisterNUICallback('escape', function(data, cb)
     EnableGui(false)
-
+    TriggerEvent("weasel-base:windowCheck", false)
     cb('ok')
 end)
 

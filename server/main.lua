@@ -14,7 +14,6 @@ RegisterCommand("craft", function(source, args, rawCommand)
     
     if (source > 0) then
         TriggerClientEvent("weasel-crafting:openMenu", source, 1)
-    
     else
         print("This command was executed by the server console, RCON client, or a resource.")
     end
