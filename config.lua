@@ -386,29 +386,51 @@ Config = {
         --------------AMMO ------------------------------
 
         {
-            Name = "ammo-45",
-            DisplayName = ".45ACP",
-            Quantity = 1200,
-            MetaData = {},
-            Time = 30000,
-            Level = 1,
+            Name = "ammo-rifle",
+            DisplayName = "5.56 Bullets",
+            Quantity = 10,
+            Time = 45000,
+            Level = 5,
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, {}, true},
-                {'Brass', 'brass_ingot', 3, {}, true}, 
-                {'Lead', 'lead_ingot', 1, {}, true} 
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
             }
         },
         {
             Name = "ammo-rifle2",
-            DisplayName = "7.62x39",
-            Quantity = 1000,
-            MetaData = {},
-            Time = 30000,
-            Level = 1,
+            DisplayName = "7.62 Bullets",
+            Quantity = 10,
+            Time = 1000,
+            Level = 5,
             Recipe = {
                 {'Gunpowder', 'gunpowder', 1, {}, true},
-                {'Brass', 'brass_ingot', 3, {}, true},
-                {'Lead', 'lead_ingot', 1, {}, true} 
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
+            }
+        },
+        {
+            Name = "ammo-45",
+            DisplayName = ".45 ACP Bullets",
+            Quantity = 10,
+            Time = 1000,
+            Level = 4,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
+            }
+        },
+        {
+            Name = "ammo-9",
+            DisplayName = "9mm Bullets",
+            Quantity = 10,
+            Time = 1000,
+            Level = 4,
+            Recipe = {
+                {'Gunpowder', 'gunpowder', 1, {}, true},
+                {'Brass Ingot', 'brass_ingot', 1, {}, true},
+                {'Lead Ingot', 'lead_ingot', 1, {}, true}
             }
         },
         ----------------------------------------
@@ -455,11 +477,7 @@ Config = {
             }
         },
         {
-<<<<<<< HEAD
-            Name = "WEAPON_SMG_MK2",
-=======
             Name = "WEAPON_SMG",
->>>>>>> 7c267d4ccc60c44d5e76a8ff595e6bcd8f822cd6
             DisplayName = "MP5",
             Quantity = 1,
             MetaData = {serial="Unregistered", durability=100},
@@ -510,32 +528,6 @@ Config = {
                 {'Bandage', 'bandage', 1, {}, true}
             }
         },
-<<<<<<< HEAD
-
-        {
-            Name = "thermite_charge_iron",
-            DisplayName = "Iron Thermite",
-            Quantity = 1,
-            Time = 90000,
-            Level = 2,
-            Recipe = {
-                {'Iron', 'iron_ingot', 30, {}, true},
-                {'Aluminum', 'aluminum_ingot', 30, {}, true}
-            }
-        },
-
-        {
-            Name = "thermite_charge_titanium",
-            DisplayName = "Titanium Thermite",
-            Quantity = 1,
-            Time = 90000,
-            Level = 2,
-            Recipe = {
-                {'Iron', 'titanium_ingot', 30, {}, true},
-                {'Aluminum', 'aluminum_ingot', 30, {}, true}
-            }
-        }
-=======
         {
             Name = "WEAPON_KNUCKLE",
             DisplayName = "Knuckle Duster",
@@ -549,54 +541,6 @@ Config = {
             }
         },
         {
-            Name = "ammo-rifle",
-            DisplayName = "5.56 Bullets",
-            Quantity = 10,
-            Time = 45000,
-            Level = 5,
-            Recipe = {
-                {'Gunpowder', 'gunpowder', 1, {}, true},
-                {'Brass Ingot', 'brass_ingot', 1, {}, true},
-                {'Lead Ingot', 'lead_ingot', 1, {}, true}
-            }
-        },
-        {
-            Name = "ammo-rifle2",
-            DisplayName = "7.62 Bullets",
-            Quantity = 10,
-            Time = 1000,
-            Level = 5,
-            Recipe = {
-                {'Gunpowder', 'gunpowder', 1, {}, true},
-                {'Brass Ingot', 'brass_ingot', 1, {}, true},
-                {'Lead Ingot', 'lead_ingot', 1, {}, true}
-            }
-        },
-        {
-            Name = "ammo-45",
-            DisplayName = ".45 ACP Bullets",
-            Quantity = 10,
-            Time = 1000,
-            Level = 4,
-            Recipe = {
-                {'Gunpowder', 'gunpowder', 1, {}, true},
-                {'Brass Ingot', 'brass_ingot', 1, {}, true},
-                {'Lead Ingot', 'lead_ingot', 1, {}, true}
-            }
-        },
-        {
-            Name = "ammo-9",
-            DisplayName = "9mm Bullets",
-            Quantity = 10,
-            Time = 1000,
-            Level = 4,
-            Recipe = {
-                {'Gunpowder', 'gunpowder', 1, {}, true},
-                {'Brass Ingot', 'brass_ingot', 1, {}, true},
-                {'Lead Ingot', 'lead_ingot', 1, {}, true}
-            }
-        },
-        {
             Name = "thermite_charge_iron",
             DisplayName = "Iron Thermite",
             Quantity = 1,
@@ -607,7 +551,6 @@ Config = {
                 {'Aluminum Ingot', 'aluminum_ingot', 30, {}, true}
             }
         },
->>>>>>> 7c267d4ccc60c44d5e76a8ff595e6bcd8f822cd6
         
     }
 }
