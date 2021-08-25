@@ -79,6 +79,7 @@ RegisterNUICallback('craft', function(data, cb)
         }, function(status)
             if not status then
                 TriggerServerEvent("weasel-crafting:craftItem", data)
+                TriggerEvent("weasel-base:windowCheck", false)
             end
         end)
     else
