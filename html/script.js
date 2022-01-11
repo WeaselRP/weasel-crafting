@@ -8,9 +8,8 @@ lastID = 0;
 mode = 0;
 craftBtnText = "Craft Item(s)";
 
-
 function getItemIMG(item){
-    return "nui://linden_inventory/html/images/"+item+".png";
+    return "nui://ox_inventory/web/build/images/"+item+".png";
 }
 
 function fillData(){
