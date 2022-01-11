@@ -2,6 +2,8 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
+local ox_inventory = exports.ox_inventory
+
 function error(source, msg)
     TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = msg, length = 4500 })
 end
@@ -35,7 +37,7 @@ AddEventHandler("weasel-crafting:craftItem", function(data)
             metaData = data.Item.Recipe[i][4]
         end
 
-        local xItem = xPlayer.getInventoryItem(data.Item.Recipe[i][2], metaData)
+        local xItem = ox_inventory:GetItem(source, data.Item.Recipe[i][2], metaData) 
         if xItem.count < (data.Item.Recipe[i][3]*amount) then
             hasItems = false
             break
@@ -50,14 +52,20 @@ AddEventHandler("weasel-crafting:craftItem", function(data)
                 metaData = data.Item.Recipe[i][4]
             end
             if data.Item.Recipe[i][5] then 
-                xPlayer.removeInventoryItem(data.Item.Recipe[i][2], math.floor(data.Item.Recipe[i][3]*data.Amount), metaData)
+                ox_inventory:RemoveItem(source, data.Item.Recipe[i][2], math.floor(data.Item.Recipe[i][3]*data.Amount), metaData)
                 ItemNames = ItemNames..data.Item.Recipe[i][1].." "
             end
         end
         if data.Item.Name == "money" or data.Item.Name == "black_money" then
             TriggerEvent("weasel-analytics:logTransaction", data.Item.Name, math.floor(data.Item.Quantity*data.Amount), xPlayer.getName(), "Item Sale: "..ItemNames)
         end
-        xPlayer.addInventoryItem(data.Item.Name, math.floor(data.Item.Quantity*data.Amount), data.Item.MetaData)
+
+        if ox_inventory:CanCarryItem(source, data.Item.Name, math.floor(data.Item.Quantity*data.Amount), data.Item.MetaData) then
+            ox_inventory:AddItem(source, data.Item.Name, math.floor(data.Item.Quantity*data.Amount), data.Item.MetaData)
+        else
+            print(ox_inventory:Inventory(1).label..' is unable to carry 5 bread')
+        end
+
         success(source, "You have crafted "..math.floor(data.Item.Quantity*data.Amount).."x "..data.Item.DisplayName)
     else
         error(source, "You are missing some required items")
