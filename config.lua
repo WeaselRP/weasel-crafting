@@ -2,6 +2,20 @@
 Config = {
     Items = {
         {
+            Name = "lockpick",
+            DisplayName = "Lockpick",
+            Quantity = 2,
+            MetaData = {},
+            Time = 10000,
+            Level = 6,
+            Recipe = {
+                {'Schroot', 'scrapmetal', 10, {}, true},
+                {'Rubber', 'rubber', 2, {}, true},
+                {'Plastic', 'plastic', 4, {}, true},
+                {'Staal', 'steel', 3, {}, true},
+            }
+        },
+        {
             Name = "corn_seed",
             DisplayName = "Corn Seed",
             Quantity = 12,
